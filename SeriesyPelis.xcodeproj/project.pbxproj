@@ -21,6 +21,10 @@
 		3F6991D319581C62001E65BB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F6991B519581C61001E65BB /* UIKit.framework */; };
 		3F6991DB19581C62001E65BB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3F6991D919581C62001E65BB /* InfoPlist.strings */; };
 		3F6991DD19581C62001E65BB /* SeriesyPelisTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F6991DC19581C62001E65BB /* SeriesyPelisTests.m */; };
+		3F6991E819581CFC001E65BB /* TVShowsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F6991E719581CFC001E65BB /* TVShowsTableViewController.m */; };
+		3F6991EB19581D05001E65BB /* MoviesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F6991EA19581D05001E65BB /* MoviesTableViewController.m */; };
+		3F6991EE195822FE001E65BB /* TVShow.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F6991ED195822FE001E65BB /* TVShow.m */; };
+		3F6991F119582305001E65BB /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F6991F019582305001E65BB /* Movie.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,14 @@
 		3F6991D819581C62001E65BB /* SeriesyPelisTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SeriesyPelisTests-Info.plist"; sourceTree = "<group>"; };
 		3F6991DA19581C62001E65BB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3F6991DC19581C62001E65BB /* SeriesyPelisTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SeriesyPelisTests.m; sourceTree = "<group>"; };
+		3F6991E619581CFC001E65BB /* TVShowsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TVShowsTableViewController.h; sourceTree = "<group>"; };
+		3F6991E719581CFC001E65BB /* TVShowsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TVShowsTableViewController.m; sourceTree = "<group>"; };
+		3F6991E919581D05001E65BB /* MoviesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoviesTableViewController.h; sourceTree = "<group>"; };
+		3F6991EA19581D05001E65BB /* MoviesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoviesTableViewController.m; sourceTree = "<group>"; };
+		3F6991EC195822FE001E65BB /* TVShow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TVShow.h; sourceTree = "<group>"; };
+		3F6991ED195822FE001E65BB /* TVShow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TVShow.m; sourceTree = "<group>"; };
+		3F6991EF19582305001E65BB /* Movie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Movie.h; sourceTree = "<group>"; };
+		3F6991F019582305001E65BB /* Movie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Movie.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,8 +127,16 @@
 				3F6991C019581C61001E65BB /* AppDelegate.h */,
 				3F6991C119581C61001E65BB /* AppDelegate.m */,
 				3F6991C319581C61001E65BB /* Main.storyboard */,
+				3F6991E919581D05001E65BB /* MoviesTableViewController.h */,
+				3F6991EA19581D05001E65BB /* MoviesTableViewController.m */,
+				3F6991E619581CFC001E65BB /* TVShowsTableViewController.h */,
+				3F6991E719581CFC001E65BB /* TVShowsTableViewController.m */,
 				3F6991C619581C61001E65BB /* ViewController.h */,
 				3F6991C719581C61001E65BB /* ViewController.m */,
+				3F6991EC195822FE001E65BB /* TVShow.h */,
+				3F6991ED195822FE001E65BB /* TVShow.m */,
+				3F6991EF19582305001E65BB /* Movie.h */,
+				3F6991F019582305001E65BB /* Movie.m */,
 				3F6991C919581C61001E65BB /* Images.xcassets */,
 				3F6991B819581C61001E65BB /* Supporting Files */,
 			);
@@ -249,8 +269,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F6991EE195822FE001E65BB /* TVShow.m in Sources */,
+				3F6991E819581CFC001E65BB /* TVShowsTableViewController.m in Sources */,
+				3F6991F119582305001E65BB /* Movie.m in Sources */,
 				3F6991C819581C61001E65BB /* ViewController.m in Sources */,
 				3F6991C219581C61001E65BB /* AppDelegate.m in Sources */,
+				3F6991EB19581D05001E65BB /* MoviesTableViewController.m in Sources */,
 				3F6991BE19581C61001E65BB /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
