@@ -8,6 +8,7 @@
 
 #import "MoviesTableViewController.h"
 #import "Movie.h"
+#import <Mantle/Mantle.h>
 
 static NSString * const savedMoviesFileName=@"movies.txt";
 

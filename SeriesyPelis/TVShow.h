@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <Mantle/Mantle.h>
 
-@interface TVShow : NSObject
+@interface TVShow : MTLModel
 
 @property (copy,nonatomic)NSString *idTVShow;
 @property (copy,nonatomic)NSString *desc;
@@ -21,10 +22,10 @@
 @end
 
 //BUENA PRACTICA PARA CATEGORIZAR LOS PROTOCOLOS
-@interface TVShow(NSCopying) <NSCopying>
+//@interface TVShow(NSCopying) <NSCopying>
 
-@end
+//@end
 
-@interface TVShow(NSCoding)<NSCoding>
+//@interface TVShow(NSCoding)<NSCoding>
 
-@end
+//@end

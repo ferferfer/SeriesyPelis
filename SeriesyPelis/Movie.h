@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <Mantle/Mantle.h>
 
-@interface Movie : NSObject
+@interface Movie : MTLModel
 
 @property (copy,nonatomic)NSString *idMovie;
 @property (copy,nonatomic)NSString *desc;
@@ -21,10 +22,10 @@
 
 
 //BUENA PRACTICA PARA CATEGORIZAR LOS PROTOCOLOS
-@interface Movie(NSCopying) <NSCopying>
+//@interface Movie(NSCopying) <NSCopying>
 
-@end
+//@end
 
-@interface Movie(NSCoding)<NSCoding>
+//@interface Movie(NSCoding)<NSCoding>
 
-@end
+//@end
