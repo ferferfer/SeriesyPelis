@@ -10,6 +10,7 @@
 #import "TVShow.h"
 
 
+
 static NSString * const savedShowsFileName=@"tvShows.txt";
 
 @interface TVShowsTableViewController ()
@@ -44,8 +45,18 @@ static NSString * const savedShowsFileName=@"tvShows.txt";
 	[self loadShows];
 	
 	if (![self.tvShowsArray count]) {
-		TVShow *newShow=[[TVShow alloc]initWithTitle:@"Show 0"];
-		[_tvShowsArray insertObject:newShow atIndex:0];
+		NSURL *jsonURL=[NSURL URLWithString:@"http://ironhack4thweek.s3.amazonaws.com/shows.json"];
+		NSData *seriesData =[NSData dataWithContentsOfURL:jsonURL];
+		NSError *error;
+		NSDictionary *jsonDictionary=[NSJSONSerialization JSONObjectWithData:seriesData options:NSJSONReadingMutableContainers error:&error];
+		
+		for (NSDictionary *seriesDict in [jsonDictionary valueForKey:@"shows"]){
+			NSError *errorDict;
+			TVShow *showItem = [MTLJSONAdapter modelOfClass:[TVShow class] fromJSONDictionary:seriesDict error:&errorDict];
+			[_tvShowsArray addObject:showItem];
+		}
+		
+		
 	}
 	
 }
@@ -110,6 +121,7 @@ static NSString * const savedShowsFileName=@"tvShows.txt";
 	TVShow *cellShow=[self.tvShowsArray objectAtIndex:indexPath.row];
 	
 	cell.textLabel.text =cellShow.title;
+	cell.detailTextLabel.text =cellShow.desc;
 	cell.backgroundColor=[UIColor orangeColor];
 
 	return cell;

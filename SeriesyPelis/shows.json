@@ -1,0 +1,68 @@
+{
+    "shows": [
+              {
+              "id":"1",
+              "title": "Breaking Bad",
+              "description": "Walter White, a struggling high school chemistry teacher, is diagnosed with advanced lung cancer. He turns to a life of crime, producing and selling methamphetamine accompanied by a former student, Jesse Pinkman, with the aim of securing his family's financial future before he dies",
+              "posterURL": "http://thetvdb.com/banners/posters/81189-22.jpg",
+              "bannerURL": "http://thetvdb.com/banners/graphical/81189-g.jpg"
+              },
+              {
+              "id":"2",
+              "title": "Battlestar Galactica",
+              "description": "In a distant part of the universe, a civilization of humans live on planets known as the Twelve Colonies. In the past, the Colonies have been at war with a cybernetic race known as the Cylons. 40 years after the first war the Cylons launch a devastating attack on the Colonies. The only military ship that survived the attack takes up the task of leading a small fugitive fleet of survivors into space in search of a fabled refuge known as Earth.",
+              "posterURL": "http://thetvdb.com/banners/posters/73545-2.jpg",
+              "bannerURL": "http://thetvdb.com/banners/graphical/73545-g.jpg"
+              },
+              {
+              "id":"3",
+              "title": "24",
+              "description": "\"24\" is a TV thriller presented in \"real time\" with each minute of airtime that corresponds to a minute in the lives of the characters. \"24\" employs fast-paced and complex stories, and often contains unexpected plot twists. Though each day's events typically revolve around thwarting an impending terrorist attack, each season is made up of various interwoven story threads. These may run for just one hour, but more usually run over several hours. These typically involve investigations of leads on terrorists, tracking suspects, and averting attacks. The exact objective of the day evolves over the course of the season as the antagonists adapt, contingencies arise, and larger scale operations unfold.",
+              "posterURL": "http://thetvdb.com/banners/posters/76290-4.jpg",
+              "bannerURL": "http://thetvdb.com/banners/graphical/76290-g.jpg"
+              },
+              {
+              "id":"4",
+              "title": "True Detective",
+              "description": "The lives of two detectives, Rust Cohle and Martin Hart, become entangled during a 17-year hunt for a serial killer in Louisiana.",
+              "posterURL": "http://thetvdb.com/banners/posters/270633-3.jpg",
+              "bannerURL": "http://thetvdb.com/banners/graphical/270633-g.jpg"
+              },
+              {
+              "id":"5",
+              "title": "Game of Thrones",
+              "description": "Seven noble families fight for control of the mythical land of Westeros. Friction between the houses leads to full-scale war. All while a very ancient evil awakens in the farthest north. Amidst the war, a neglected military order of misfits, the Night's Watch, is all that stands between the realms of men and icy horrors beyond.",
+              "posterURL": "http://thetvdb.com/banners/posters/121361-4.jpg",
+              "bannerURL": "http://thetvdb.com/banners/graphical/121361-g.jpg"
+              },
+              {
+              "id":"6",
+              "title": "American Horror Story",
+              "description": "American Horror Story is a horror-drama television franchise created and produced by Ryan Murphy and Brad Falchuk. Described as an anthology series, each season is conceived as a self-contained miniseries, following a disparate set of characters and settings, and a storyline with its own \"beginning, middle and end\".",
+              "posterURL": "http://thetvdb.com/banners/posters/250487-10.jpg",
+              "bannerURL": "http://thetvdb.com/banners/graphical/250487-g.jpg"
+              },
+              {
+              "id":"7",
+              "title": "Doctor Who",
+              "description": "The Doctor looks and seems human. He's handsome, witty, and could be mistaken for just another man in the street. But he is a Time Lord: a 900+ year old alien with two hearts, part of a gifted civilization who mastered time travel. The Doctor saves planets for a living – more of a hobby actually, and he's very, very good at it. He's saved us from alien menaces and evil from before time began – but just who is he?",
+              "posterURL": "http://thetvdb.com/banners/posters/78804-29.jpg",
+              "bannerURL": "http://thetvdb.com/banners/graphical/78804-g.jpg"
+              },
+              {
+              "id":"8",
+              "title": "House of Cards",
+              "description": "House of Cards is an American political drama series developed and produced by Beau Willimon. It is an adaptation of a previous BBC miniseries of the same name which is based on the novel by Michael Dobbs. Set in present day Washington, D.C., House of Cards is the story of Frank Underwood (Kevin Spacey), a Democrat from South Carolina's 5th congressional district and the House Majority Whip, who, after getting passed over for promotion to Secretary of State, decides to exact his revenge on those who betrayed him. The series also stars Robin Wright, Kate Mara and Corey Stoll in lead roles.",
+              "posterURL": "http://thetvdb.com/banners/posters/262980-3.jpg",
+              "bannerURL": "http://thetvdb.com/banners/graphical/262980-g.jpg"
+              },
+              {
+              "id":"9",
+              "title": "Damages",
+              "description": "Set in New York's world of high stakes litigation, Damages follows the lives of Patty Hewes (Glenn Close), the nation's most revered and most reviled litigator, and her bright, ambitious protege Ellen Parsons (Rose Byrne) as they become embroiled in a class action lawsuit targeting Arthur Frobisher (Ted Danson), one of the country's wealthiest CEOs. As Patty battles Frobisher and his attorney, Ellen learns what it takes to win at all costs -- and that lives, not just fortunes, are at stake.",
+              "posterURL": "http://thetvdb.com/banners/posters/80367-8.jpg",
+              "bannerURL": "http://thetvdb.com/banners/graphical/80367-g12.jpg"
+              }
+              
+              ]
+}

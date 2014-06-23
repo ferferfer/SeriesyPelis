@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <Mantle/Mantle.h>
 
-@interface TVShow : MTLModel
+@interface TVShow : MTLModel  <MTLJSONSerializing>
 
 @property (copy,nonatomic)NSString *idTVShow;
 @property (copy,nonatomic)NSString *desc;

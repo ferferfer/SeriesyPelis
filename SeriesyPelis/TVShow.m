@@ -28,6 +28,14 @@
 }
 
 
++(NSDictionary *)JSONKeyPathsByPropertyKey{
+	return @{@"desc": @"description",
+					 @"title":@"title",
+					 @"idTVShow":@"id"
+					 };
+}
+
+
 //-(BOOL)isEqual:(id)object{
 //	if(self==object){
 //		return YES;
