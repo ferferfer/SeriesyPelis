@@ -38,10 +38,15 @@ static NSString * const savedMoviesFileName=@"movies.txt";
 }
 
 - (void)customInit{
+	
 	_moviesArray= [[NSMutableArray alloc]init];
-	Movie *newMovie=[[Movie alloc]init];
-	newMovie.title=@"Movie 0";
-	[_moviesArray addObject:newMovie];
+	[self loadMovies];
+	
+	if (![self.moviesArray count]) {
+		Movie *newMovie=[[Movie alloc]init];
+		newMovie.title=@"Movie 0";
+		[_moviesArray addObject:newMovie];
+	}
 	
 }
 - (void)viewDidLoad
@@ -83,7 +88,16 @@ static NSString * const savedMoviesFileName=@"movies.txt";
 }
 
 - (IBAction)saveMovie:(id)sender {
-	
+	if ([self.moviesArray count]) {
+    [NSKeyedArchiver archiveRootObject:self.moviesArray toFile:[self archivePath]];
+	}
+}
+
+- (void)loadMovies {
+	NSArray *movies=[NSKeyedUnarchiver unarchiveObjectWithFile:[self archivePath]];
+	if ([movies count]) {
+    _moviesArray=[movies mutableCopy];
+	}
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -101,8 +115,23 @@ static NSString * const savedMoviesFileName=@"movies.txt";
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 	
 	Movie *myMovie=[self.moviesArray objectAtIndex:indexPath.row];
+	Movie *copiedMovie=[myMovie copy];
+	[self.moviesArray insertObject:copiedMovie atIndex:[self.moviesArray count]];
 	
-	[self.moviesArray insertObject:[myMovie copy] atIndex:[self.moviesArray count]];
+	//PROBAMOS EL isEqual
+	Movie *firstMovie=[self.moviesArray objectAtIndex:1];
+	if ([firstMovie isEqual:copiedMovie]) {
+    NSLog(@"IGUALES! 🐥🐴");
+	}else{
+    NSLog(@"DISTINTOS! 🐥🐴");
+	}
+	
+	if ([firstMovie hash]==[copiedMovie hash]) {
+		NSLog(@"SAME HASH! 🐥🐴");
+	}else{
+		NSLog(@"DISTINT HASH! 🐥🐴");
+	}
+	
 	
 	[self.tableView reloadData];
 }

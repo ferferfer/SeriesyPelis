@@ -11,7 +11,7 @@
 @interface Movie : NSObject
 
 @property (copy,nonatomic)NSString *idMovie;
-@property (copy,nonatomic)NSString *description;
+@property (copy,nonatomic)NSString *desc;
 @property (copy,nonatomic)NSString *title;
 @property	(assign,nonatomic)CGFloat rating;
 

@@ -9,7 +9,7 @@
 #import "TVShowsTableViewController.h"
 #import "TVShow.h"
 
-static NSString * const savedShowsFileName=@"tvShows";
+static NSString * const savedShowsFileName=@"tvShows.txt";
 
 @interface TVShowsTableViewController ()
 
@@ -38,11 +38,14 @@ static NSString * const savedShowsFileName=@"tvShows";
 }
 
 - (void)customInit{
-	_tvShowsArray= [[NSMutableArray alloc]init];
 	
-	TVShow *newShow=[[TVShow alloc]initWithTitle:@"Show 0"];
-
-	[_tvShowsArray insertObject:newShow atIndex:0];
+	_tvShowsArray= [[NSMutableArray alloc]init];
+	[self loadShows];
+	
+	if (![self.tvShowsArray count]) {
+		TVShow *newShow=[[TVShow alloc]initWithTitle:@"Show 0"];
+		[_tvShowsArray insertObject:newShow atIndex:0];
+	}
 	
 }
 - (IBAction)addShow:(id)sender {
@@ -54,10 +57,20 @@ static NSString * const savedShowsFileName=@"tvShows";
 	[self.tableView reloadData];
 }
 - (IBAction)saveShow:(id)sender {
+	if ([self.tvShowsArray count]) {
+    [NSKeyedArchiver archiveRootObject:self.tvShowsArray toFile:[self archivePath]];
+	}
 }
 
-- (void)viewDidLoad
-{
+- (void)loadShows {
+	NSArray *shows=[NSKeyedUnarchiver unarchiveObjectWithFile:[self archivePath]];
+	if ([shows count]) {
+    _tvShowsArray=[shows mutableCopy];
+	}
+}
+
+
+- (void)viewDidLoad{
     [super viewDidLoad];
 
 }
@@ -101,11 +114,27 @@ static NSString * const savedShowsFileName=@"tvShows";
 	return cell;
 }
 
+
+//SI PULSO UNA LINEA, SE DUPLICA AL FINAL
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 	
 	TVShow *myShow=[self.tvShowsArray objectAtIndex:indexPath.row];
-
 	[self.tvShowsArray insertObject:[myShow copy] atIndex:[self.tvShowsArray count]];
+	
+	
+	//PROBAMOS EL isEqual
+	TVShow *firstShow=[self.tvShowsArray objectAtIndex:1];
+	if ([firstShow isEqual:[myShow copy]]) {
+    NSLog(@"IGUALES! 🐥🐴");
+	}else{
+    NSLog(@"DISTINTOS! 🐥🐴");
+	}
+	
+	if ([firstShow hash]==[[myShow copy] hash]) {
+		NSLog(@"SAME HASH! 🐥🐴");
+	}else{
+		NSLog(@"DISTINT HASH! 🐥🐴");
+	}
 	
 	[self.tableView reloadData];
 }

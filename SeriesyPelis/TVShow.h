@@ -11,11 +11,12 @@
 @interface TVShow : NSObject
 
 @property (copy,nonatomic)NSString *idTVShow;
-@property (copy,nonatomic)NSString *description;
+@property (copy,nonatomic)NSString *desc;
 @property (copy,nonatomic)NSString *title;
 @property	(assign,nonatomic)CGFloat rating;
 
 - (id)initWithTitle:(NSString *)title;
+
 
 @end
 
